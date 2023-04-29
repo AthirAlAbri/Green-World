@@ -1,0 +1,325 @@
+<html>
+    <head>
+        <title>Home page</title>
+        <link rel="stylesheet" href="part2.CSS">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <style>
+
+  
+            #p1{font-size: 127%; text-align: center; color: rgb(13, 14, 13);}
+
+            .p2{font-size: 200%; text-align: center; color: rgb(7, 92, 7);}
+            .p3{font-size: 150%; text-align: center; color: rgb(7, 92, 7); margin-left: 8% auto; margin-right: 8% auto; }
+            #button{background-color: rgb(3, 61, 3);color: aliceblue;margin: auto; }
+            #button2{background-color: rgb(230, 235, 230);color: rgb(3, 61, 3);
+              margin-left:  auto; cursor: pointer;border-color: rgb(3, 61, 3);}
+            .uu{text-align: center;}
+
+            .background{
+              background-color: rgb(231, 243, 231);
+            }
+
+            .banner{ 
+              color: rgb(7, 92, 7);
+              padding: 10px;
+              position: relative;
+              font-size:x-large;
+              animation: anim1 linear 15s infinite ;
+
+            }
+
+            @keyframes anim1 {
+              0%   { transform: translateX(-100%);}
+              100% { transform: translateX(100%);}
+            }
+
+            #button3{
+              background-color: rgb(3, 61, 3);color: aliceblue;margin: auto;
+            }
+
+            
+            .slideshow{
+              position: relative;
+              width: 80% ;
+              height: 300px ;
+              padding: 10px;
+              margin-bottom: 0.5%;
+          }
+          .gallery{
+              width: 80% ;
+              height: 300px ;
+              box-shadow: 0 0 20px rgb(104, 143, 104);
+          }
+
+          .slideshow > div{
+              position: absolute;
+              top: 10px ;
+              bottom: 10px ;
+              left: 10px ;
+              right: 10px ;
+          }
+          
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+              <img src="part2/logooo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+              <a class="navbar-brand" href="#">Green World</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ordersteps.html">Order steps</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="store.html">Store</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Calculation.html">Calculation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="funpage.html">Fun</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Questionnaire.html">Questionnaire</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Contact.html">Contact us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="text" placeholder="Search">
+                  <button class="btn btn-primary" type="button">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+
+  
+        <div class="bgimage">
+            <br/>
+            <p>Green World </p>
+            <p style="font-size: 25% ; text-align: center; color: rgb(7, 92, 7)">For a better environment</p>
+            <br/>
+        </div>
+    
+        <br/>
+
+        <h1 class="center" style="color:rgb(3, 61, 3);">Different Types of recycle Items: </h1>
+
+        <div class="slideshow center">
+            <div>
+                <img class="gallery" src="part2/1.jpg" alt="">
+            </div>
+            <div>
+                <img class="gallery" src="part2/2.jpg" alt="">
+            </div>
+            <div>
+                <img class="gallery" src="part2/3.jpg" alt="">
+            </div>
+            <div>
+                <img class="gallery" src="part2/4.jpg" alt="">
+            </div>
+        </div>
+
+            <!--JQeary code to make the photo-gallery-->
+              <script>
+                $('.slideshow > div').hide();
+
+                //to set the duration of eash image
+                setInterval(function(){
+                    $('.slideshow > div:first')
+                    .fadeIn(500) 
+                    .next() 
+                    .fadeOut(500)
+                    .end() //end of slideshow
+                    .appendTo('.slideshow');  //continuously running
+                }, 4500) //4500 milliseconds
+            </script>
+
+
+            <br/><br/>
+    <p class="footer">
+        <br/>
+        <a href="https://www.norcalcompactors.net/why-is-recycling-important/">TO KNOW MORE ABOUT RECYCLING</a>
+        <br/>
+        <br/>
+    </p>
+    
+    <p style="background-color: rgb(231, 243, 231); font-size: x-large; text-align: center; color: rgb(3, 48, 14)">
+    You don't know how to order?
+
+    <br/>
+    <br/>
+    <form class="uu" action="OrderSteps.html">
+        <a id="button2" href="ordersteps.html" class="btn btn-success">press here</a>
+        </form>
+    
+    </p>
+    <div>
+    <br/>
+    <hr>
+      <p style=" font-size: x-large; text-align: center; color: rgb(3, 48, 14)">Visit to these pages: </p>
+    <form class="uu" >
+      <a id="button3" href="calculation.html" class="btn btn-success">Calculation page</a>
+      <a id="button3" href="Questionnaire.html" class="btn btn-success">Questionnaire page</a>
+      <a id="button3" href="funpage.html" class="btn btn-success">Fun page</a>
+      </form>
+      <hr>
+
+      <br/>
+      <br/>
+        
+    <p style="background-color: rgb(231, 243, 231); font-size: x-large; text-align: center; color: rgb(3, 48, 14)">
+    Do you have a problem?
+    <br/>
+    <br/>
+    <form  class="uu" action="Contact.html">
+        <a id="button2" href="Contact.html" class="btn btn-success">Contact us</a>
+
+    </form>
+    
+    <br/>
+    
+    
+
+    <div class="container mt-3" uu>
+  
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tr>
+                <th colspan="2"><p style="font-size: 400%; text-align: center ; color: rgb(7, 92, 7)";>Categories:</p></th>
+            </tr>
+            <tr>
+                <th><p class="p2">Clothes</p></th>
+                <th><p class="p2">Bags</p></th>
+            </tr>
+          
+              <tr>
+                 <!--First image-->
+                <td><div class="center" > <a href="Store.html">
+                  <img src="part2/clothes.jpg" width="400 auto" height="400 auto">
+                </a></div>
+                   </td>
+  
+
+                  <!--Second image-->
+                <td><div class="center"><a href="Store.html">
+                  <img src="part2/bags.jpg" width="400" height="400" >
+                </a></div> 
+                    </td>
+                
+        
+              </tr>
+
+              <tr>
+                <th><p class="p2">Shoes</p></th>
+                <th><p class="p2">Furniture</p></th>
+            </tr>
+       
+              <tr>
+                 <!--Third image-->
+                <td><div class="center"><a href="Store.html">
+                <img src="part2/shoes.jpg" width="400" height="400">
+                </a></div>
+                  </td>
+
+                 <!--Forth image-->
+                <td><div class="center"><a href="Store.html">
+                  <img src="part2/furniture.jpg" width="400" height="400">
+                </a></div>
+                    </td>                  
+               
+              </tr>
+         
+          </table>
+
+          
+
+          <script>
+            //java script code 
+            function Clothes(clothes){
+              this.clothes = clothes;
+            }
+            function Bags(bags){
+              this.bags = bags;
+            }
+            function Shoes(shoes){
+              this.shoes = shoes;
+            }
+            function Furniture(furniture){
+              this.furniture = furniture;
+            }
+            function displayclothimg(){
+              var clothimg = document.getElementById("part2/clothes.jpg");
+              showImageButton.addEventListener("click",)
+              myimage.hidden=!myimge.hidden;
+              }
+            
+              function displaybagsimg(){
+                var bagsimg = document.getElementById("part2/bags.jpg");
+              showImageButton.addEventListener("click",)
+              myimage.hidden=!myimge.hidden;
+              }
+              function displaybagsimg(){
+                var shoimg = document.getElementById("part2/shoes.jpg");
+              showImageButton.addEventListener("click",)
+              myimage.hidden=!myimge.hidden;
+              }
+              function displaybagsimg(){
+                var furnimg = document.getElementById("part2/furniture.jpg");
+              showImageButton.addEventListener("click",)
+              myimage.hidden=!myimge.hidden;
+              }
+            
+            
+          
+          </script>
+
+
+      </div>
+      </div>
+
+      <br/>
+
+    <p class="p3">At Green World, our goal is to protect our planet by encouraging people to buy recycled things, thus increasing their awareness of recycling and its importance . </p>
+    <br/>
+    <p class="p3">We believe that you can make a big difference with a small step. </p>
+    <br/>
+    <br/>
+
+    <div class="background">
+    <div  class="banner">
+      <p>Welcome to the Green World website! Today is <span id="today"></span> and the time is 
+        <span id="time"></span></p>
+    </div>
+  </div>
+
+
+
+    <p class="footer">
+        <br/>
+        Press <a href="Contact.html">here</a> if you need help
+        <br/>
+        <br/>
+    </p>
+</body>
+
+</html>
